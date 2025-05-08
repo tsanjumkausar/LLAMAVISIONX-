@@ -1,4 +1,8 @@
 import streamlit as st
+
+# Set wide page layout to use full browser width
+st.set_page_config(layout="wide")
+
 from groq import Groq
 import base64
 from PIL import Image
@@ -32,9 +36,6 @@ API_KEY = os.getenv("GROQ_API_KEY")
 if not API_KEY:
     st.error("❌ GROQ_API_KEY is missing. Please set it in your config.toml or .env file.")
     st.stop()
-
-# Set wide page layout to use full browser width
-st.set_page_config(layout="wide")
 
 
 def encode_image(image):
@@ -248,3 +249,4 @@ with right_col:
 
     for speaker, message in st.session_state.chat_history:
         st.markdown(format_message(speaker, message))
+
