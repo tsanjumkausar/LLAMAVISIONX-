@@ -1,0 +1,6 @@
+streamlit
+groq
+Pillow
+gtts
+python-dotenv
+toml
