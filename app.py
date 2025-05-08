@@ -249,4 +249,3 @@ with right_col:
 
     for speaker, message in st.session_state.chat_history:
         st.markdown(format_message(speaker, message))
-
