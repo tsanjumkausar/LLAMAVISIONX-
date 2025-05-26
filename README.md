@@ -57,6 +57,9 @@ Open the URL provided by Streamlit in your browser to use the app.
 - python-dotenv
 - toml
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+
 ## Notes
 
 - Ensure your API key is kept secure and not hardcoded in the source code.
