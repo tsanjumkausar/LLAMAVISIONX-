@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "CyberEye 3.0",
+  "version": "1.0",
+  "description": "Real-time phishing detector with LLM backend",
+  "permissions": ["scripting", "tabs", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
